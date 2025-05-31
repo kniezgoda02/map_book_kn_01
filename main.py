@@ -1,5 +1,5 @@
 from utils.model import users
-from utils.controler import get_user_info
+from utils.controler import get_user_info, add_user
 
 
 def main():
@@ -14,12 +14,13 @@ def main():
         choice = input('Wybierz opcję Menu')
         if choice =='0': break
         if choice =='1': get_user_info(users[1:])
+        if choice =='2': add_user(users)
 
 
 
 
 
-    get_user_info(users[1:])
+
 
 
 if __name__ == '__main__':
