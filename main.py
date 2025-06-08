@@ -1,5 +1,5 @@
 from utils.model import users
-from utils.controler import get_user_info, add_user, remove_user
+from utils.controler import get_user_info, add_user, remove_user, update_user
 
 
 def main():
@@ -10,21 +10,16 @@ def main():
         print('1 - Wyświetl znajomych')
         print('2 - Dodaj znajomego')
         print('3 - Usuń znajomego')
+        print('4 - Zaaktualizuj dane o znajomych')
         print('======================')
 
         choice = input('Wybierz opcję Menu')
-        if choice =='0': break
-        if choice =='1': get_user_info(users[1:])
-        if choice =='2': add_user(users)
-        if choice =='3': remove_user(users)
-
-
-
-
-
-
+        if choice == '0': break
+        if choice == '1': get_user_info(users[1:])
+        if choice == '2': add_user(users)
+        if choice == '3': remove_user(users)
+        if choice == '4': update_user(users[1:])
 
 
 if __name__ == '__main__':
     main()
-
